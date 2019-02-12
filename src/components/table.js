@@ -4,20 +4,22 @@ import  ReactTable from 'react-table'
 import "react-table/react-table.css"
 import "./style.css";
 import {Link} from 'react-router-dom'
-
+import { BrowserRouter, Route } from 'react-router-dom'
+import UserDetail from './userDetail';
 class Table extends Component{
 state={
     data:user,
     table:'',
     detail:'none'
 }
-
 render() {
-    function result(id) {
-        var url = "localhost:3000/user"+id
-        window.location(url);
-    }
 
+
+function result(){
+    <BrowserRouter>
+        <Route path='/user/:id' component={UserDetail} />
+      </BrowserRouter>
+}
     const columns =[
         {
             Header:"First Name",
@@ -64,13 +66,14 @@ render() {
             filterable:false
         }
     ]
-    const onRowClick = (rowInfo) => {
+    const onRowClick = (state, rowInfo, column, instance) => {
         return {
             style: {
                 cursor:"pointer"
             },
             onClick: e => {
-               console.log(rowInfo.original)                            
+               console.log(rowInfo.original.id)  
+               result(rowInfo.original.id)                          
             }
         }
     }
