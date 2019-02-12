@@ -1,10 +1,9 @@
 import React , {Component} from 'react'
 import {user} from '../users';
-import  ReactTable , { userReactTable }from 'react-table'
+import  ReactTable from 'react-table'
 import "react-table/react-table.css"
 import "./style.css";
 import {Link} from 'react-router-dom'
-import userDetail from './userDetail';
 
 class Table extends Component{
 state={
