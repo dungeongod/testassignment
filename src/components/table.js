@@ -64,13 +64,13 @@ render() {
             filterable:false
         }
     ]
-    const onRowClick = (state, rowInfo, column, instance) => {
+    const onRowClick = (rowInfo) => {
         return {
             style: {
                 cursor:"pointer"
             },
             onClick: e => {
-                result(rowInfo.original.id);                              
+               console.log(rowInfo.original)                            
             }
         }
     }

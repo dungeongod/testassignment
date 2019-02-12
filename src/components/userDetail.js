@@ -12,6 +12,7 @@ export default class UserDetail extends Component {
             //     return user[i];
 
             console.log(res[i])
+            return res[i]
             }
         }
     //}
@@ -25,7 +26,18 @@ export default class UserDetail extends Component {
         
         User Details
         </div>
-           
+            <div className="row">
+                <div className="col-md-12">
+                    <h1>{result.first_name}</h1>
+                    <div className="col-md-6">Company</div><div className="col-md-6">{result.company_name}</div>
+                    <div className="col-md-6">City</div><div className="col-md-6">{result.city}</div>
+                    <div className="col-md-6">State</div><div className="col-md-6">{result.state}</div>
+                    <div className="col-md-6">ZIP</div><div className="col-md-6">{result.zip}</div>
+                    <div className="col-md-6">Email</div><div className="col-md-6">{result.email}</div>
+                    <div className="col-md-6">Web</div><div className="col-md-6">{result.web}</div>
+                    <div className="col-md-6">Age</div><div className="col-md-6">{result.age}</div>
+                </div>
+            </div>
       </div>
     )
   }
