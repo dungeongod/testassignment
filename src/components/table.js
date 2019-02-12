@@ -15,11 +15,6 @@ state={
 render() {
 
 
-function result(){
-    <BrowserRouter>
-        <Route path='/user/:id' component={UserDetail} />
-      </BrowserRouter>
-}
     const columns =[
         {
             Header:"First Name",
@@ -73,7 +68,8 @@ function result(){
             },
             onClick: e => {
                console.log(rowInfo.original.id)  
-               result(rowInfo.original.id)                          
+               //result(rowInfo.original.id)                          
+             
             }
         }
     }
@@ -104,7 +100,6 @@ function result(){
         </ReactTable>
       </div>
     )
-}
-  
+} 
 }
 export default Table;

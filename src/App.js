@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {Switch,Route} from 'react-router-dom'
 import Table from './components/table'
-
-
 import UserDetail from './components/userDetail.js';
 import Default from './components/default'
 class App extends Component {
